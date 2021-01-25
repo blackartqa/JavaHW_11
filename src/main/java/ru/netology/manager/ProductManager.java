@@ -11,7 +11,7 @@ public class ProductManager {
     public ProductManager() {
     }
 
-    public ProductManager(Product[] products) {
+    public ProductManager(ProductRepository repository) {
         this.repository = repository;
     }
 
@@ -19,7 +19,7 @@ public class ProductManager {
         repository.save(product);
     }
 
-    public Product[] searchBy(String text) {
+    public Product[] SearchBy(String text) {
         Product[] result = new Product[0];
         for (Product product : repository.findAll()) {
             if (matches(product, text)) {
