@@ -19,7 +19,7 @@ public class ProductManager {
         repository.save(product);
     }
 
-    public Product[] SearchBy(String text) {
+    public Product[] searchBy(String text) {
         Product[] result = new Product[0];
         for (Product product : repository.findAll()) {
             if (matches(product, text)) {

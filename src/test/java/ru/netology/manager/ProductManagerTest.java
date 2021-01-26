@@ -27,7 +27,7 @@ class ProductManagerTest {
         for (Book book : Arrays.asList(book1, book2, book3, book4, book5)) {
             manager.add(book);
         }
-        Product[] actual = manager.SearchBy("Book1");
+        Product[] actual = manager.searchBy("Book1");
         Product[] expected = new Product[]{book1};
         assertArrayEquals(expected, actual);
 
@@ -47,7 +47,7 @@ class ProductManagerTest {
         for (Book book : Arrays.asList(book1, book2, book3, book4, book5)) {
             manager.add(book);
         }
-        Product[] actual = manager.SearchBy("Author4");
+        Product[] actual = manager.searchBy("Author4");
         Product[] expected = new Product[]{book5};
         assertArrayEquals(expected, actual);
 
@@ -67,7 +67,7 @@ class ProductManagerTest {
         for (Book book : Arrays.asList(book1, book2, book3, book4, book5)) {
             manager.add(book);
         }
-        Product[] actual = manager.SearchBy("Author2");
+        Product[] actual = manager.searchBy("Author2");
         Product[] expected = new Product[]{book2, book4};
         assertArrayEquals(expected, actual);
 
@@ -85,7 +85,7 @@ class ProductManagerTest {
         for (Smartphone smartphone : Arrays.asList(smartphone1, smartphone2, smartphone3, smartphone4, smartphone5)) {
             manager.add(smartphone);
         }
-        Product[] actual = manager.SearchBy("Xiaomi");
+        Product[] actual = manager.searchBy("Xiaomi");
         Product[] expected = new Product[]{smartphone5};
         assertArrayEquals(expected, actual);
     }
@@ -102,7 +102,7 @@ class ProductManagerTest {
         for (Smartphone smartphone : Arrays.asList(smartphone1, smartphone2, smartphone3, smartphone4, smartphone5)) {
             manager.add(smartphone);
         }
-        Product[] actual = manager.SearchBy("Samsung");
+        Product[] actual = manager.searchBy("Samsung");
         Product[] expected = new Product[]{smartphone1, smartphone2};
         assertArrayEquals(expected, actual);
     }
@@ -119,7 +119,7 @@ class ProductManagerTest {
         for (Smartphone smartphone : Arrays.asList(smartphone1, smartphone2, smartphone3, smartphone4, smartphone5)) {
             manager.add(smartphone);
         }
-        Product[] actual = manager.SearchBy("S10");
+        Product[] actual = manager.searchBy("S10");
         Product[] expected = new Product[]{smartphone2};
         assertArrayEquals(expected, actual);
     }
@@ -145,7 +145,7 @@ class ProductManagerTest {
             manager.add(book);
         }
 
-        Product[] actual = manager.SearchBy("Samsung");
+        Product[] actual = manager.searchBy("Samsung");
         Product[] expected = new Product[]{smartphone1, smartphone2, book5};
         assertArrayEquals(expected, actual);
     }
